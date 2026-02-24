@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Application Tracker</title>
+    <!-- tailwind cdn -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- font awsm cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+
+</head>
+
+<body class="w-[80%] mx-auto bg-gray-100 min-h-screen">
+
+<header class="pb-3">
+    <h1 class="text-3xl font-bold py-5">Job Application Tracker</h1>
+
+    <div class="flex gap-6 flex-wrap">
+        <div class="min-w-[320px] border bg-white p-6 rounded-xl shadow-sm">
+            <h1>Total</h1>
+            <p class="text-4xl font-bold totalcount">0</p>
+        </div>
+
+        <div class="min-w-[320px] border bg-white p-6 rounded-xl shadow-sm">
+            <h1>Interview</h1>
+            <p id="interviewcount" class="text-green-600 text-4xl font-bold">0</p>
+        </div>
+
+        <div class="min-w-[320px] border bg-white p-6 rounded-xl shadow-sm">
+            <h1>Rejected</h1>
+            <p id="rejectedcount" class="text-red-600 text-4xl font-bold">0</p>
+        </div>
+    </div>
+</header>
+
+<hr class="my-6">
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
