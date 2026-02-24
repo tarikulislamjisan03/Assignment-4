@@ -44,7 +44,217 @@
 
 <hr class="my-6">
 
+<main>
 
+    <section class="flex justify-between items-center py-4">
+        <h1 class="text-[#002C5C] font-bold text-3xl">Available Jobs</h1>
+        <p><span class="totalcount">0</span> Jobs</p>
+    </section>
+
+    <!-- data filters -->
+    <section class="mb-6">
+        <div class="flex gap-3">
+            <button onclick="filterCards('all')" id="all" class="active px-8 py-2 bg-white rounded-md button">All</button>
+            <button onclick="filterCards('interview')" id="interview" class="px-8 py-2 bg-white rounded-md button">Interview</button>
+            <button onclick="filterCards('rejected')" id="rejected" class="px-8 py-2 bg-white rounded-md button">Rejected</button>
+        </div>
+    </section>
+
+  <!-- No Jobs Interface -->
+    <div id="noJobsMessage" class="hidden text-center bg-white p-10 rounded-xl shadow-sm">
+        <i class="fa-solid fa-file-lines text-6xl text-gray-400 mb-4"></i>
+        <h2 class="text-2xl font-bold text-gray-700">No jobs available</h2>
+        <p class="text-gray-500">Check back soon for new job opportunities</p>
+    </div>
+
+   <!-- Job Cards  -->
+    <section id="main" class="space-y-5">
+
+        <!-- card one -->
+         <div class="job-card bg-white p-6 rounded-xl shadow-sm flex justify-between items-start" data-status="not-applied">
+    <div class="space-y-3 flex-1">
+      <h1 class="text-2xl font-bold">Mobile First Corp</h1>
+      <p>React Native Developer</p>
+      <p>Remote
+ • 
+Full-time 
+•
+ $130,000 - $175,000</p>
+      <div class="status-btn bg-blue-50 text-blue-700 px-4 py-1 inline-block rounded">
+        Not Applied
+      </div>
+      <p>Build cross-platform mobile applications using React Native. Work on products used by millions of users worldwide.</p>
+      <div class="flex gap-3 mt-4">
+        <button class="interview-btn border-2 border-green-600 px-6 py-2 rounded-lg">Interview</button>
+        <button class="reject-btn border-2 border-red-500 px-6 py-2 rounded-lg">Rejected</button>
+      </div>
+    </div>
+    <button class="delete-btn text-red-500 ml-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+  </div>
+  <!-- card two -->
+   <div class="job-card bg-white p-6 rounded-xl shadow-sm flex justify-between items-start" data-status="not-applied">
+    <div class="space-y-3 flex-1">
+      <h1 class="text-2xl font-bold">Google Inc.</h1>
+      <p>Senior Frontend Developer</p>
+      <p>Mountain View • Full-time • $180,000 - $250,000</p>
+      <div class="status-btn bg-blue-50 text-blue-700 px-4 py-1 inline-block rounded">
+        Not Applied
+      </div>
+      <p>Work on the world's most popular search engine and develop cutting-edge user interfaces using React.</p>
+      <div class="flex gap-3 mt-4">
+        <button class="interview-btn border-2 border-green-600 px-6 py-2 rounded-lg">Interview</button>
+        <button class="reject-btn border-2 border-red-500 px-6 py-2 rounded-lg">Rejected</button>
+      </div>
+    </div>
+    <button class="delete-btn text-red-500 ml-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+</div>
+<!-- card three -->
+ <div class="job-card bg-white p-6 rounded-xl shadow-sm flex justify-between items-start" data-status="not-applied">
+    <div class="space-y-3 flex-1">
+      <h1 class="text-2xl font-bold">Amazon Web Services</h1>
+      <p>Backend Engineer (Node.js)</p>
+      <p>Seattle • Remote • $150,000 - $190,000</p>
+      <div class="status-btn bg-blue-50 text-blue-700 px-4 py-1 inline-block rounded">
+        Not Applied
+      </div>
+      <p>Build and maintain scalable cloud infrastructure and microservices for global AWS customers.</p>
+      <div class="flex gap-3 mt-4">
+        <button class="interview-btn border-2 border-green-600 px-6 py-2 rounded-lg">Interview</button>
+        <button class="reject-btn border-2 border-red-500 px-6 py-2 rounded-lg">Rejected</button>
+      </div>
+    </div>
+    <button class="delete-btn text-red-500 ml-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+</div>
+ <!-- card four -->
+<div class="job-card bg-white p-6 rounded-xl shadow-sm flex justify-between items-start" data-status="not-applied">
+    <div class="space-y-3 flex-1">
+      <h1 class="text-2xl font-bold">Meta Platforms</h1>
+      <p>Product Designer</p>
+      <p>Menlo Park • Hybrid • $140,000 - $185,000</p>
+      <div class="status-btn bg-blue-50 text-blue-700 px-4 py-1 inline-block rounded">
+        Not Applied
+      </div>
+      <p>Create intuitive user experiences for social networking apps and future metaverse technologies.</p>
+      <div class="flex gap-3 mt-4">
+        <button class="interview-btn border-2 border-green-600 px-6 py-2 rounded-lg">Interview</button>
+        <button class="reject-btn border-2 border-red-500 px-6 py-2 rounded-lg">Rejected</button>
+      </div>
+    </div>
+    <button class="delete-btn text-red-500 ml-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+</div>
+<!-- card five -->
+<div class="job-card bg-white p-6 rounded-xl shadow-sm flex justify-between items-start" data-status="not-applied">
+    <div class="space-y-3 flex-1">
+      <h1 class="text-2xl font-bold">Netflix</h1>
+      <p>Full Stack Developer</p>
+      <p>Los Gatos • Remote • $200,000 - $300,000</p>
+      <div class="status-btn bg-blue-50 text-blue-700 px-4 py-1 inline-block rounded">
+        Not Applied
+      </div>
+      <p>Develop high-performance video streaming features and handle complex content delivery systems.</p>
+      <div class="flex gap-3 mt-4">
+        <button class="interview-btn border-2 border-green-600 px-6 py-2 rounded-lg">Interview</button>
+        <button class="reject-btn border-2 border-red-500 px-6 py-2 rounded-lg">Rejected</button>
+      </div>
+    </div>
+    <button class="delete-btn text-red-500 ml-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+</div>
+<!-- card six -->
+ <div class="job-card bg-white p-6 rounded-xl shadow-sm flex justify-between items-start" data-status="not-applied">
+    <div class="space-y-3 flex-1">
+      <h1 class="text-2xl font-bold">Tesla Motors</h1>
+      <p>AI Engineer</p>
+      <p>Austin • On-site • $170,000 - $220,000</p>
+      <div class="status-btn bg-blue-50 text-blue-700 px-4 py-1 inline-block rounded">
+        Not Applied
+      </div>
+      <p>Build neural networks and machine learning models for self-driving car software and robotics.</p>
+      <div class="flex gap-3 mt-4">
+        <button class="interview-btn border-2 border-green-600 px-6 py-2 rounded-lg">Interview</button>
+        <button class="reject-btn border-2 border-red-500 px-6 py-2 rounded-lg">Rejected</button>
+      </div>
+    </div>
+    <button class="delete-btn text-red-500 ml-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+</div>
+ <!-- card seven -->
+  <div class="job-card bg-white p-6 rounded-xl shadow-sm flex justify-between items-start" data-status="not-applied">
+    <div class="space-y-3 flex-1">
+      <h1 class="text-2xl font-bold">Spotify AB</h1>
+      <p>iOS Developer</p>
+      <p>Stockholm • Remote • $115,000 - $150,000</p>
+      <div class="status-btn bg-blue-50 text-blue-700 px-4 py-1 inline-block rounded">
+        Not Applied
+      </div>
+      <p>Deliver the best audio experience on mobile. Work on Swift, UI/UX, and audio playback systems.</p>
+      <div class="flex gap-3 mt-4">
+        <button class="interview-btn border-2 border-green-600 px-6 py-2 rounded-lg">Interview</button>
+        <button class="reject-btn border-2 border-red-500 px-6 py-2 rounded-lg">Rejected</button>
+      </div>
+    </div>
+    <button class="delete-btn text-red-500 ml-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+</div>
+<!-- card eight -->
+  <div class="job-card bg-white p-6 rounded-xl shadow-sm flex justify-between items-start" data-status="not-applied">
+    <div class="space-y-3 flex-1">
+      <h1 class="text-2xl font-bold">Microsoft</h1>
+      <p>Software Engineer (C#)</p>
+      <p>Redmond • Hybrid • $165,000 - $215,000</p>
+      <div class="status-btn bg-blue-50 text-blue-700 px-4 py-1 inline-block rounded">
+        Not Applied
+      </div>
+      <p>Join the Azure Cloud team and develop robust software using .NET core and modern C# features.</p>
+      <div class="flex gap-3 mt-4">
+        <button class="interview-btn border-2 border-green-600 px-6 py-2 rounded-lg">Interview</button>
+        <button class="reject-btn border-2 border-red-500 px-6 py-2 rounded-lg">Rejected</button>
+      </div>
+    </div>
+    <button class="delete-btn text-red-500 ml-4">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+</div>
+         
+ 
+        
+
+    </section>
+</main>
+
+
+
+
+
+
+  
 
 <script src="script.js"></script>
 </body>
